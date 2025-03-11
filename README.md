@@ -8,5 +8,6 @@ helm repo ls
 helm search repo ingress-nginx
 helm search repo ingress-nginx --versions
 helm show values ingress-nginx/ingress-nginx --version 4.12.0
+helm upgrade --install nginx-ingress ingress-nginx/ingress-nginx --version 4.12.0 --namespace nginx-ingress --create-namespace --wait
 helm upgrade --install nginx-ingress ingress-nginx/ingress-nginx --version 4.12.0 --namespace nginx-ingress --create-namespace -f values.yaml --wait
 ```
